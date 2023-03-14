@@ -1,0 +1,62 @@
+@import "./colors.scss";
+@import "@/styles/variables.scss";
+
+@mixin mobile() {
+  @media screen and (max-width: $screenMedium - 1) {
+    @content;
+  }
+}
+
+@mixin ipad() {
+  @media screen and (max-width: $screenLarge - 1) {
+    @content;
+  }
+}
+
+@mixin xLarge() {
+  @media screen and (min-width: $screenXLarge - 1) {
+    @content;
+  }
+}
+
+@mixin backGroundColor() {
+  background: $pink;
+  background: linear-gradient(138.11deg, black 0%, $pink 121.92%);
+}
+
+@mixin pageContainer() {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  height: fit-content;
+}
+
+@mixin shiningTitle($color1, $color2) {
+  background: linear-gradient(-45deg, $color1, $color2);
+  background-size: 300% 300%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: shine 3s ease-in-out infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 100% 100%;
+  }
+
+  25% {
+    background-position: 50% 50%;
+  }
+
+  50% {
+    background-position: 0% 0%;
+  }
+
+  75% {
+    background-position: 50% 50%;
+  }
+
+  100% {
+    background-position: 100% 100%;
+  }
+}

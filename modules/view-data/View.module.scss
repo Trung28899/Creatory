@@ -1,0 +1,10 @@
+@import "@/styles/mixin.scss";
+
+.container {
+  @include pageContainer();
+
+  .tableContainer {
+    width: 90%;
+    margin: 50px auto;
+  }
+}
